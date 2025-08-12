@@ -1,4 +1,4 @@
-# Men-Women Detection using Transfer Learning & Data Augmentation
+# Brain Tumor Detection using EfficientNetB0 and Transfer Learning 
 
 🎯 هدف پروژه: ایجاد مدل بهینه و دقیق برای تشخیص تومور مغزی در تصاویر MRI با استفاده از مدل EfficientNetB0 از پیش آموزش‌دیده و دیگر تکنیک‌های deep learning
 
@@ -106,7 +106,7 @@ pip install tensorflow numpy matplotlib seaborn scikit-learn
 ```bash
 jupyter notebook
 ```
-Open the file Men_women_detection.ipynb and run all cells.
+Open the file Brain_tumor_detection.ipynb and run all cells.
 
 
 
