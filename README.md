@@ -1,8 +1,17 @@
 # Brain Tumor Detection using EfficientNetB0 and Transfer Learning 
 
-🎯 هدف پروژه: ایجاد مدل بهینه و دقیق برای تشخیص تومور مغزی در تصاویر MRI با استفاده از مدل EfficientNetB0 از پیش آموزش‌دیده و دیگر تکنیک‌های deep learning
+🎯 Project Goal: Build an optimized and accurate model for brain tumor detection in MRI scans using the pre-trained EfficientNetB0 model and advanced deep learning techniques.
 
 
+## 🌐 Links
+
+- [Dataset](https://www.kaggle.com/datasets/preetviradiya/brian-tumor-dataset)  
+
+Dataset: Brain Tumor MRI Dataset (Healthy & Tumor images)
+
+Google Colab Notebook: Run the project online in Google Colab
+
+GitHub Repository: Source code and project documentation
 
 ## 🌐 لینک ها
 
