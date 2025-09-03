@@ -11,7 +11,7 @@
 - [View project in Google Colab](https://colab.research.google.com/drive/1yTaL8_Fqk3TbfHazISD6DFJFajpOq_mV?usp=sharing)  
   Google Colab Notebook: Run the project online in Google Colab
 
-- [View project در GitHub](https://github.com/eliram88/Brain_tumor_detection)  
+- [View project in GitHub](https://github.com/eliram88/Brain_tumor_detection)  
   GitHub Repository: Source code and project documentation
 
 
