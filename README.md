@@ -1,32 +1,22 @@
 # Brain Tumor Detection using EfficientNetB0 and Transfer Learning 
 
-🎯 Project Goal: Build an optimized and accurate model for brain tumor detection in MRI scans using the pre-trained EfficientNetB0 model and advanced deep learning techniques.
+🎯 Project Goal: Building an optimized and accurate model for brain tumor detection in MRI scans using the pre-trained EfficientNetB0 model and advanced deep learning techniques.
 
 
 ## 🌐 Links
 
 - [Dataset](https://www.kaggle.com/datasets/preetviradiya/brian-tumor-dataset)  
+  Brain Tumor MRI Dataset (Healthy & Tumor images)
 
-Dataset: Brain Tumor MRI Dataset (Healthy & Tumor images)
+- [View project in Google Colab](https://colab.research.google.com/drive/1yTaL8_Fqk3TbfHazISD6DFJFajpOq_mV?usp=sharing)
+  Google Colab Notebook: Run the project online in Google Colab
 
-Google Colab Notebook: Run the project online in Google Colab
-
-GitHub Repository: Source code and project documentation
-
-## 🌐 لینک ها
-
-- [دیتاست پروژه](https://www.kaggle.com/datasets/preetviradiya/brian-tumor-dataset)  
-  دیتاست MRI تومور مغزی و تصاویر سالم
-
-- [مشاهده پروژه در Google Colab](https://colab.research.google.com/drive/1yTaL8_Fqk3TbfHazISD6DFJFajpOq_mV?usp=sharing)  
-  اجرای آنلاین کد پروژه در محیط Google Colab
-
-- [مشاهده پروژه در GitHub](https://github.com/eliram88/Brain_tumor_detection)
-   سورس کد و مستندات پروژه در GitHub 
+- [View project در GitHub](https://github.com/eliram88/Brain_tumor_detection)
+  GitHub Repository: Source code and project documentation
 
 
 
-## 🔧 ابزارهای استفاده‌شده
+## 🔧 Tools & Libraries
 
 - Python (TensorFlow, Keras, NumPy, Matplotlib, Seaborn, scikit-learn)  
 - Google Colab
@@ -36,7 +26,7 @@ GitHub Repository: Source code and project documentation
 
 
 
-## 📊  دیتاست
+## 📊 Dataset
 
 - **Source:** Brain Tumor MRI Dataset from Kaggle  
 - **Samples:**  
@@ -49,36 +39,37 @@ GitHub Repository: Source code and project documentation
 
 
 
-## 📊 مراحل پروژه
+
+## 📊 Project stages
 
 
-### 🛠 Preprocessing | پیش‌پردازش
+### 🛠 Preprocessing 
 
-- ایجاد ساختار پوشه برای تقسیم‌بندی داده به train/val/test  
-- بارگذاری داده‌ها با `image_dataset_from_directory` و اندازه تصویر `(224, 224)`  
-- اعمال Prefetch برای افزایش سرعت خواندن داده‌ها  
-- Data Augmentation شامل:  
+- Structured dataset into train/val/test directories
+- Loaded images with image_dataset_from_directory at size (224, 224)
+- Applied Prefetching for faster loading
+- Data Augmentation:
   - Random Flip  
   - Random Rotation (0.1)  
-  - Random Zoom (0.1)  
-- نمایش نمونه تصاویر همراه با برچسب
+  - Random Zoom (0.1) 
+- Displayed sample images with labels
 
 
-### 🧠 Model Design | طراحی مدل
+### 🧠 Model Design
 
-- استفاده از مدل EfficientNetB0 (وزن‌های ImageNet، بدون لایه‌های بالایی)  
-- لایه‌های مدل:  
+- Base Model: EfficientNetB0 (ImageNet weights, top layers removed)
+- Layers:
   - Data Augmentation  
   - Preprocess Input مخصوص EfficientNet  
-  - EfficientNetB0 (غیرقابل آموزش در ابتدا)  
+  - EfficientNetB0 (frozen initially)  
   - Global Average Pooling  
   - Dropout (0.3)  
-  - Dense (128 واحد، relu)  
+  - Dense (28 units, ReLU)  
   - Dropout (0.2)  
   - Dense (1, activation="sigmoid")
 
 
-### ⚙ Training | آموزش
+### ⚙ Training 
  
 **Phase 1 — Transfer Learning**  
 - Base model frozen  
@@ -95,23 +86,24 @@ GitHub Repository: Source code and project documentation
 - Callback: ModelCheckpoint & EarlyStopping
 
 
-### 📈 Results | نتایج
+### 📈 Results
 
 - **Test Accuracy:** 0.9074  
-- **Test Loss:** 0.1990  
-- ماتریس درهم‌ریختگی (Confusion Matrix) و گزارش طبقه‌بندی (Classification Report) نشان‌دهنده عملکرد دقیق مدل در تشخیص تومور و سالم بودن است.  
-- مدل به خوبی توانسته با دقت بالا و کمترین خطا تصاویر را طبقه‌بندی کند.
+- **Test Loss:** 0.1990
+  
+- Confusion Matrix & Classification Report show strong performance in distinguishing tumor vs. healthy cases.
+- The model achieves high accuracy with minimal errors.
 
 
 
-## 🚀 نحوه اجرا
+## 🚀 How to Run
 
-1) Install dependencies | نصب کتابخانه‌ها
+1) Install dependencies 
 ```bash
 pip install tensorflow numpy matplotlib seaborn scikit-learn
 ```
 
-2) Run Jupyter Notebook | اجرای نوت‌بوک
+2) Run Jupyter Notebook  
 ```bash
 jupyter notebook
 ```
@@ -119,7 +111,7 @@ Open the file Brain_tumor_detection.ipynb and run all cells.
 
 
 
-## 📁 ساختار فایل‌ها
+## 📁 Project Structure
 
 ```bash
 Brain_tumor_detection/
@@ -139,9 +131,11 @@ Brain_tumor_detection/
 
 
 
-## 🧑‍💻 توسعه‌دهنده
+## 🧑‍💻 Developer
 
-این پروژه توسط یک علاقه‌مند به یادگیری عمیق و بینایی ماشین طراحی و اجرا شده،
-با هدف ارتقا مهارت در تحلیل داده‌های پزشکی و پیاده‌سازی مدل‌های پیشرفته.
+This project was developed by a deep learning and computer vision enthusiast with the goal of:
 
-✨ هدف: تولید نمونه‌کار قابل ارائه و یادگیری تخصصی حوزه تشخیص تصاویر پزشکی
+  - Advancing skills in medical image analysis
+  - Building a professional portfolio project
+  - Applying state-of-the-art deep learning models for healthcare
+
